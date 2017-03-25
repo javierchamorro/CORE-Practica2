@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="normal.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="movil.css" rel="stylesheet" media="screen and (max-device-width:480px)" type="text/css">
+		<title>CORE2016 P2</title>
+	</head>
+	<body onload="metodo()">
+		<header id="obj">Se ha solicitado el objeto:</header>	
+		<section id="main">
+			<table id="tabla"></table>
+			<script type="text/javascript">	
+			function metodo(){
+					objeto = prompt("Nombre de un objeto JavaScript");
+					document.getElementById("obj").innerHTML="Se ha solicitado el objeto:" + objeto;
+					objeto=window[objeto];
+					var tabla = document.getElementById("tabla");
+					tabla.innerHTML +="<tr><th>Nombre de la propiedad</th><th>Valor</th></tr>";
+					for(var x in objeto){
+						var v;
+						if(objeto[x] instanceof Object || typeof(objeto[x])==="function"){
+							v = "No imprimible";
+						}else{		
+							v = objeto[x];
+						}
+						tabla.innerHTML += "<tr><td>" + x + "</td><td>" + v + "</td></tr>";
+					}
+				}
+			</script>
+		</section>
+		<footer>
+			<div  id="pie">
+				<p>Javier Chamorro Abella: <a href="mailto:javier.chamorroa@alumnos.upm.es">javier.chamorroa@alumnos.upm.es</a></p>
+			</div>
+		</footer>
+	</body>
+	</html>

@@ -1,0 +1,14 @@
+body{
+	background-color: #5668B1;
+}
+#tabla{
+	margin: auto;
+	width: auto;
+	height: auto;
+	border-collapse: collapse;
+}
+tr:nth-child(odd) {
+	border: #5668B1 7px solid;
+	background-color: #6170AD;
+}
+

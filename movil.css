@@ -1,0 +1,20 @@
+body{
+	background-color: #5668B1;
+}
+#tabla{
+	text-align: center;
+	font-size: 60px;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+tr:nth-child(odd) {
+	border: #5668B1 7px solid;
+	background-color: #6170AD;
+}
+h1{
+	display: none;
+}
+footer{
+	display: none;
+}
